@@ -39,7 +39,7 @@ const Todo = {
                     Disponible: "Si",
                     Img: "./Fotos/TSamsung.jpg"
                 },
-                {Name: "Tablet Aple",
+                {Name: "Tablet Apple",
                     Id: 6,
                     Tipo: "Tablet",
                     Estado: "Nuevo",
@@ -138,7 +138,7 @@ const Todo = {
                 Disponible: "Si",
                 Img: "./Fotos/Correr.jpg"
              },
-             {Name: "Polora Blanca",
+             {Name: "Polera Blanca",
                 Id: 18,
                 Tipo: "Polera",
                 Estado: "Nuevo",
@@ -146,7 +146,7 @@ const Todo = {
                 Disponible: "Si",
                 Img: "./Fotos/Blanca.jpg"
             },
-            {Name: "Polora Negra",
+            {Name: "Polera Negra",
                Id: 19,
                Tipo: "Polera",
                Estado: "Nuevo",
@@ -154,7 +154,7 @@ const Todo = {
                Disponible: "Si",
                Img: "./Fotos/Negra.jpg"
             },
-            {Name: "tenis Nike",
+            {Name: "Tenis Nike",
                 Id: 20,
                 Tipo: "Tenis",
                 Estado: "Nuevo",
