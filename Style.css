@@ -1,578 +1,715 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
-body{
-    height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #18191b;
 }
 
-header{
-    width: 100%;
-    height: 5rem;
-    background-color: antiquewhite;
-
+header {
+  width: 100%;
+  height: 5rem;
 }
 
-h1{
-    font-size: 1.7rem;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(100, 220, 204), rgb(74, 120, 204));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(rgb(100, 220, 204), rgb(74, 120, 204));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Solway", serif;
 }
 
-.Imgs{
-    width: 100%;
-    height: 100%;
+.Imgs {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
-.Todos{
-    width: 100%;
-    height: 75%;
-    display: flex;
-    justify-content: space-between;
-    background-color: azure;
+.Todos {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #41403e;
+  margin-bottom: 0.5rem;
 }
 
-.Todos div{
-    width: 30%;
-    text-align: center;
+.Todos div {
+  width: 30%;
+  text-align: center;
 }
 
-.Menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.Logo{
-    display: flex;
-    align-items: center;
-    font-weight: 800;
-    font-size: 1.6rem;
-    font-family: 'Edu NSW ACT Foundation', cursive;
-        font-family: 'Roboto', sans-serif;
+.Logo {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
-.CarritoIcon{
-    display: flex;
-    align-items: center;
+.CarritoIcon {
+  display: flex;
+  align-items: center;
 }
 
-.Menu svg{
-    width: 40%;
-    height: 50%;
+.Menu svg {
+  width: 40%;
+  height: 50%;
 }
 
-.CarritoIcon svg{
-    width: 100%;
-    height: 50%;
-    align-items: center;
+.CarritoIcon svg {
+  width: 100%;
+  height: 50%;
+  align-items: center;
 }
 
-.Otros{
-    display: flex;
-    justify-content: space-around;
-    border-top:1px solid rgb(0, 0, 0) ;
-    border-bottom:1px solid rgb(0, 0, 0) ;
-    background-color: rgb(240, 248, 255);
+.Otros {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-.Otros p{
-    width: 30%;
-    text-align: center;
-    /* border-right: 1px solid black; */
+.Otros p {
+  text-align: center;
+  padding: 0.2rem;
+  color: #cccccc;
+  /* border-right: 1px solid black; */
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Solway", serif;
+
+  border: 1px solid #cccc;
+  border-radius: 20px;
 }
 
-#Tegnologia{
-    border-right: 1px solid black;
+.Otros p:active {
+  background-color: #ccc;
+  color: #41403e;
 }
 
-#Otros{
-    text-align: center;
-    border-left: 1px solid black; 
+#Tegnologia {
+  /* border-right: 1px solid black; */
 }
 
-
-.Nav{
-    width: 50%;
-    height: calc(100vh - 5rem);
-    position: absolute;
-    background-color: rgb(249, 249, 249);
-    top: 0%;
-    left: 0;
-    transform: translateX(-100%);
-    transition: transform .3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+#Otros {
+  text-align: center;
+  /* border-left: 1px solid black; */
 }
 
-.center{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Sva svg {
+  display: none;
 }
 
-.Nav p{
-    margin-bottom: 20px;
-    position: relative;
-    cursor: pointer;
+.Nav {
+  width: 50%;
+  height: calc(100vh - 5rem);
+  position: absolute;
+  background-color: rgb(249, 249, 249);
+  top: 0%;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Nav p::before{
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: -.8rem;
-    width: .3rem;
-    height: .3rem;
-    border-radius: 50%;
-    background-color: black
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #41403e;
 }
 
-.Nav p:active{
-    color: rgb(184, 32, 32);
+.Nav p {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  color: #ccc;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Solway", serif;
 }
 
-.Carrito{
-    width: 50%;
-    height: calc(100vh - 5rem);
-    position: absolute;
-    background-color: rgb(249, 249, 249);
-    top: 0%;
-    right: 0%;
-    transform: translateX(100%);
-    transition: transform .3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    -webkit-box-shadow: 4px 5px 11px -1px rgba(166,166,166,1);
-    -moz-box-shadow: 4px 5px 11px -1px rgba(166,166,166,1);
-    box-shadow: 4px 5px 11px -1px rgba(166,166,166,1); 
+.Nav p::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -0.8rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: black;
 }
 
-.CierraCard{
-    width: 100%;
-    height: 3.8rem;
-    display: flex;
-    position: fixed;
-    z-index: 1000;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgb(0, 0, 0);
+.Nav p:active {
+  color: rgb(184, 32, 32);
 }
 
-.Modal{
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(49, 49, 49, 0.384);
-        opacity: 0;
-        pointer-events: none;
-        transform: all 1s;
+.Carrito {
+  width: 50%;
+  height: calc(100vh - 5rem);
+  position: absolute;
+  background-color: rgb(249, 249, 249);
+  top: 0%;
+  right: 0%;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 4px 5px 11px -1px rgba(166, 166, 166, 1);
+  -moz-box-shadow: 4px 5px 11px -1px rgba(166, 166, 166, 1);
+  box-shadow: 4px 5px 11px -1px rgba(166, 166, 166, 1);
 }
 
-.Modal-conten{
-    width: 50%;
-    height: 5rem;
-    background-color: aliceblue;
-    position: relative;
+.CierraCard {
+  width: 100%;
+  height: 3.8rem;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-.TodoEnModal{
-    width: 27rem;
-    height: 34rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+.CierraCard svg {
+  width: 2rem;
 }
 
-.MoreClose{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    margin-bottom: 10px;
+.Modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(49, 49, 49, 0.384);
+  opacity: 0;
+  pointer-events: none;
+  transform: all 1s;
 }
 
-.MoreClose p{
-    margin-top: 10px;
-    margin-left: 2rem;
-    font-size: 2rem;
-    font-weight: bolder;
+.Modal-conten {
+  width: 50%;
+  height: 5rem;
+  background-color: aliceblue;
+  position: relative;
 }
 
-.CloseModal{
-    width: 10%;
-    height: 10%;
-    margin-top:5px;
-    margin-right: 5px;
+.TodoEnModal {
+  width: 27rem;
+  height: 34rem;
+  background-color: #9b9b9b;
+  border-radius: 20px;
 }
 
-.ModalVer{
-    opacity: 1;
-    pointer-events: auto;
+.MoreClose {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-bottom: 10px;
 }
 
-.MoreInfo{
-    width: 100%;
-    height: 80%;
+.MoreClose p {
+  margin-top: 10px;
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
-.MoreInfo article{
-    width: 100%;
-    height: 100%;
+.CloseModal {
+  width: 10%;
+  height: 10%;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
-.MoreInfo article figure{
-    width: 50%;
-    height: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+.ModalVer {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.ModalTodo{
-    display: flex;
-    justify-content: space-evenly;
+.MoreInfo {
+  width: 100%;
+  height: 80%;
 }
 
-.Aler{
-    background-color: rgb(164, 62, 62);
+.MoreInfo article {
+  width: 100%;
+  height: 100%;
 }
 
-.VColor{
-    background-color: rgb(164, 62, 62);
+.MoreInfo article figure {
+  width: 50%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
-.DatoModal{
-    margin-bottom: 2rem;
+.ModalTodo {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.EstadoModal{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
+.Aler {
+  background-color: rgb(164, 62, 62);
 }
 
-.BotonesModal{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-evenly;
+.VColor {
+  background-color: rgb(164, 62, 62);
 }
 
-.bold{
-    font-weight: bold;
+.DatoModal {
+  margin-bottom: 2rem;
+}
+
+.EstadoModal {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.BotonesModal {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bold {
+  font-weight: bold;
 }
 /*-----------------------------------------------*/
 
-
-.CarritoDentro{
-    width: 3rem;
-   
+.CarritoDentro {
+  width: 3rem;
 }
 
-.CloseCard{
-    width: 3rem;
+.CloseCard {
+  width: 3rem;
 }
 
-
-.ObjCard{
-    width: 100%;
-    height: 80%;
-    overflow-x:hidden ;
-    margin-top: 4rem;
-    margin-bottom: 10px;
+.ObjCard {
+  width: 100%;
+  height: 80%;
+  overflow-x: hidden;
+  margin-top: 4rem;
+  margin-bottom: 10px;
+  background-color: #41403e;
 }
 
-.Obj{
-    width: 100%;
-    height: 7rem;
-    margin-bottom: 5px;
-    border-bottom: 1px solid rgb(0, 0, 0);
+.Obj {
+  width: 100%;
+  height: 7rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-.Obj figure{
-    width: 60%;
-    height: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.Obj figure {
+  width: 60%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.CardObj{
-    width: 100%;
-    height: 50%;
-    display: flex;
+.CardObj {
+  width: 100%;
+  height: 50%;
+  display: flex;
 }
 
-.CardDesc{
-    display: flex;
-    justify-content: space-around;
+.CardDesc {
+  display: flex;
+  justify-content: space-around;
 }
 
-.CardDesc p{
-    font-weight: bold;
+.CardDesc p {
+  font-weight: bold;
 }
 
-.CardBoton{
-    display: flex;
-    justify-content: space-evenly;
+.CardBoton {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.G{
-    background-color: rgb(132, 181, 132);
+.G {
+  background-color: rgb(132, 181, 132);
 }
 
-.R{
-    background-color: rgb(164, 62, 62);
+.R {
+  background-color: rgb(164, 62, 62);
 }
-
 
 /*-*/
 
-.View{
-    transform: translateX(0); 
+.View {
+  transform: translateX(0);
 }
 
-.Close{
-    width: 100%;
-    height: 3.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgb(0, 0, 0);
+.Close {
+  width: 100%;
+  height: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-.Close svg{
-    width: 3rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.Close svg {
+  width: 3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.Esta{
-    display: none;
+.Esta {
+  display: none;
 }
-
-
-
 
 /*-*/
 
-main{
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit,minmax(210px , 1fr));
-    grid-row-gap: 2rem;
-    margin-bottom: 1rem;
+main {
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-row-gap: 2rem;
+  margin-bottom: 1rem;
 }
-
 
 /*--------------------------------------------------------*/
 
-.Category{
-    grid-column: 1 / -1;
+.Category {
+  grid-column: 1 / -1;
+  color: #cccccc;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Solway", serif;
 }
 
-#Producto{
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 200px;
-    height: 260px;
-    background-color: rgb(255, 255, 255);
-    -webkit-box-shadow: 4px 5px 11px -1px rgba(166,166,166,1);
-    -moz-box-shadow: 4px 5px 11px -1px rgba(166,166,166,1);
-    box-shadow: 4px 5px 11px -1px rgba(166,166,166,1); 
-    padding: .5rem;
-    border-radius: .5rem;
+#Producto {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 200px;
+  height: 260px;
+  background-color: #41403e;
+  -webkit-box-shadow: 4px 5px 11px -1px rgb(30, 30, 30);
+  -moz-box-shadow: 4px 5px 11px -1px rgb(41, 41, 41);
+  box-shadow: 4px 5px 11px -1px rgb(27, 27, 27);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-
-.Ima{
-    width: 100%;
-    height: 60%;
-    margin-bottom: .2rem;
+.Ima {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 0.2rem;
 }
 
-.Data{
-    width: 100%;
-    height: 40%;
+.Data {
+  width: 100%;
+  height: 40%;
 }
 
-.Name{
-    text-align: center;
-    font-weight: bold;
+.Name {
+  text-align: center;
+  font-weight: bold;
+  color: #cccccc;
+  font-size: 0.9rem;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Solway", serif;
 }
 
-.Precio{
-    font-weight:bold ;
-    text-align: center;
-    color: brown;
-    margin-top: .4rem;
-    margin-bottom: .4rem;
+.Precio {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(132, 181, 132);
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
-.Botones{
-
-    display: flex;
-    justify-content: center;
+.Botones {
+  display: flex;
+  justify-content: center;
 }
 
-.Boton{
-    padding: .3rem .6rem ;
-    border-radius: 15px;
-    color:rgb(255, 255, 255) ;
-    border: none;
+.Boton {
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
 }
 
-.Buton-G{
-    margin-left: .2rem;
-    background-color: rgb(132, 181, 132);
+.Buton-G {
+  margin-left: 0.2rem;
+  background-color: rgb(132, 181, 132);
 }
 
-.Buton-R{
-    margin-right: .2rem;
-    background-color: rgb(164, 62, 62);
+.Buton-R {
+  margin-right: 0.2rem;
+  background-color: rgb(164, 62, 62);
 }
 
-footer{
-    width: 100%;
-    border-top: 1px solid rgb(0, 0, 0);
-    text-align: center;
-    padding: .3rem;
+footer {
+  width: 100%;
+  border-top: 1px solid rgb(164, 164, 164);
+  text-align: center;
+  padding: 0.3rem;
 }
 
-a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+a {
+  color: #cccccc;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*---------------------*/
 
-
 @media screen and (min-width: 780px) {
-    .CarritoDentro{
-        width: 12%;
-    }
+  .CarritoDentro {
+    width: 12%;
+  }
 
-    .CloseCard{
-        width: 12%;
-    }
+  .CloseCard {
+    width: 12%;
+  }
 }
 
-
-
 @media screen and (min-width: 1000px) {
+  #Tegnologia {
+    border-right: none;
+  }
 
-    .Menu{
-        display: none;
-    }
+  #Otros {
+    border-left: none;
+  }
 
-    .Header{
-        width: 82%;
-        margin-left: 18%;
-    }
+  .Todos {
+    background-color: #41403e;
+  }
 
-    .Logo{
-        margin-left: 35%;
-        justify-content: center;
-    }
+  header {
+    background-color: #18191b;
+  }
+  .Menu {
+    display: none;
+  }
 
+  .Header {
+    width: 82%;
+    margin-left: 18%;
+  }
 
-    Main{
-        width: 70%;
-        margin-left: 25%;
-    }
+  .Sva {
+    width: 60%;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
 
-    .Pointer{
-        cursor: pointer;
-    }
+  .Sva svg {
+    display: flex;
+    width: 2rem;
+    color: #cccccc;
+  }
 
-    .Otros p:hover{
-        color: rgb(71, 71, 211);
-    }
+  .Sva:hover {
+    background-color: #cccccc;
+    border-radius: 20px;
+    padding: 0.2rem;
+  }
 
+  .Sva:hover p {
+    color: #41403e;
+  }
 
+  .Sva:hover svg {
+    color: #41403e;
+  }
 
-    .Nav{
-        width: 18%;
-        min-height: 100vh;
-        position: fixed;
-        background-color: rgb(249, 249, 249);
-        transform: translateX(0);
-        top: 0%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: none; 
-        padding-top: 1.8rem;
-        border-right: 1px solid rgb(0, 0, 0);
-    }
+  .Logo {
+    margin-left: 35%;
+    justify-content: center;
+  }
 
-    .Nav p{
-        border-bottom: 1px solid rgb(0, 0, 0);
-        cursor: pointer;
-    }
+  Main {
+    width: 70%;
+    margin-left: 25%;
+    margin-top: 3.5rem;
+  }
 
-    .Nav p:hover{
-        color: rgb(0, 47, 255);
-    }
+  .Pointer {
+    cursor: pointer;
+  }
 
-    .Carrito{
-        width: 25%;
-    }
+  .Otros {
+    width: 18%;
+    min-height: 100vh;
+    position: fixed;
+    background-color: #41403e;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
+    border-right: 1px solid rgb(0, 0, 0);
+  }
 
-    .Obj{
-        height: 8rem;
-    }
+  .Otros p {
+    font-size: 1.2rem;
+    color: #cccccc;
 
-    .CarritoDentro{
-        width: 12%;
-    }
+    border: none;
+  }
 
-    .CloseCard{
-        width: 12%;
-    }
+  .Nav {
+    width: 70%;
+    height: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    transform: translateX(35%);
+    box-shadow: none;
+  }
 
-    .Esta{
-        text-align: center;
-        display: block;
-        font-size: 25px;
-        font-weight: bold;
-    }
+  .Nav p {
+    font-size: 0.8rem;
+    color: #cccccc;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    cursor: pointer;
+  }
 
-    .Close{
-        display: none;
-    }
+  .Nav p:hover {
+    color: #41403e;
+    background-color: #cccccc;
+  }
 
-    .Boton:hover{
-        color: rgb(0, 0, 0);
-    }
+  .Nav p::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -0.8rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  .center {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: unset;
+    background-color: #18191b;
+  }
+
+  .Carrito {
+    width: 25%;
+  }
+
+  .Obj {
+    height: 8rem;
+  }
+
+  .CarritoDentro {
+    width: 12%;
+  }
+
+  .CloseCard {
+    width: 12%;
+  }
+
+  .Esta {
+    text-align: center;
+    display: none;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .Close {
+    display: none;
+  }
+
+  .Boton:hover {
+    color: rgb(0, 0, 0);
+  }
 }
